@@ -16,7 +16,7 @@ void setup() {
 
 void loop() {
   currentTime = 1000*(millis()-timeOn);
-  Serial.print(currentTime);
+  Serial.println(currentTime);
   
   if(countDown) {
       //soundEffect
