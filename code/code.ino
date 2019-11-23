@@ -22,7 +22,15 @@ void loop() {
       }
   }
   if(normal) {
-    
+    // music = ON;
+    if(A0){
+      count+=2;
+      // play celebration sound
+    }
+    if( timeOn - endNormalTime ){ //endNormalTime needs to be created
+      normal = false;
+      threePoint = true;
+    }
   }
   if(threePoint) {
    if(digitalRead(digitalInPin) == HIGH) {
