@@ -15,12 +15,12 @@ void setup() {
 }
 
 void loop() {
-  currentTime = 1000*(millis()-timeOn);
-  Serial.println(currentTime);
+  currentTime = (millis()-timeOn);
+ // Serial.println(currentTime);
   
   if(countDown) {
       //soundEffect
-      if(currentTime>=5) {
+      if(currentTime>=5000) {
         countDown = false;
         normal =  true;
         Serial.println("Starting now");
@@ -32,10 +32,10 @@ void loop() {
       count+=2;
       Serial.println(count);
     }
-    if( currentTime>=50 ){ 
+    if( currentTime>=50000 ){ 
       normal = false;
       threePoint = true;
-      Serial.println("Starting normal");
+      Serial.println("Three point mode");
     }
   }
   if(threePoint) {
@@ -43,7 +43,7 @@ void loop() {
     count+=3;
     Serial.println(count);
    }
-   if(currentTime >= 65) {
+   if(currentTime >= 65000) {
     threePoint = false;
     gameOver = true;
     count = 0;
