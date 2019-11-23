@@ -44,6 +44,10 @@ void loop() {
    }
   }
   if(gameOver) {
-    
+    while(true){
+    //music = ON;//
+      if(digitalRead(digitalInPin)==HIGH){
+      gameOver=false;
+      countDown=true;
   }
 }
